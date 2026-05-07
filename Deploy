@@ -1,0 +1,736 @@
+# Google App Engine (GAE) Viva Questions & Answers
+
+For Practical: **“Use GAE launcher to launch the web applications”**
+
+---
+
+# Basic Theory Questions
+
+### What is Google App Engine?
+
+[Google App Engine Documentation](https://cloud.google.com/appengine/docs?utm_source=chatgpt.com) is a Platform as a Service (PaaS) provided by Google to develop and host web applications.
+
+---
+
+### What is Cloud Computing?
+
+Delivering computing services over internet.
+
+---
+
+### Types of Cloud Services?
+
+1. IaaS
+2. PaaS
+3. SaaS
+
+---
+
+### GAE belongs to which cloud model?
+
+```text
+PaaS (Platform as a Service)
+```
+
+---
+
+### What is PaaS?
+
+Provides platform to develop, run, and deploy applications without managing servers.
+
+---
+
+### Advantages of Google App Engine?
+
+* Automatic scaling
+* Easy deployment
+* Secure
+* No server management
+* Fast hosting
+
+---
+
+### What is web application?
+
+Software that runs in browser using internet.
+
+---
+
+### Difference between website and web application?
+
+| Website        | Web Application  |
+| -------------- | ---------------- |
+| Static content | Interactive      |
+| Informational  | User interaction |
+| Example: Blog  | Example: Gmail   |
+
+---
+
+### What is deployment?
+
+Uploading application to cloud/server.
+
+---
+
+### What is hosting?
+
+Making application accessible on internet.
+
+---
+
+# GAE Architecture Questions
+
+### What is runtime environment?
+
+Environment where application executes.
+
+Example:
+
+```text
+Python
+Java
+Node.js
+PHP
+```
+
+---
+
+### Which runtimes supported in GAE?
+
+* Python
+* Java
+* Node.js
+* Go
+* PHP
+
+---
+
+### What is automatic scaling?
+
+GAE automatically increases/decreases resources based on traffic.
+
+---
+
+### What is instance in GAE?
+
+Running copy of application.
+
+---
+
+### What is load balancing?
+
+Distributing traffic across servers.
+
+---
+
+### What is sandbox in GAE?
+
+Secure isolated execution environment.
+
+---
+
+# Installation Questions
+
+### Which software required for GAE?
+
+* Python
+* Google Cloud SDK
+* VS Code or any editor
+
+---
+
+### What is Google Cloud SDK?
+
+Tools used to manage Google Cloud services.
+
+---
+
+### Command to check gcloud installed?
+
+```bash
+gcloud version
+```
+
+---
+
+### Command to login into Google Cloud?
+
+```bash
+gcloud auth login
+```
+
+---
+
+### Command to initialize SDK?
+
+```bash
+gcloud init
+```
+
+---
+
+# File Related Questions
+
+### What is `app.yaml`?
+
+Main configuration file for App Engine.
+
+---
+
+### Purpose of `app.yaml`?
+
+Defines:
+
+* Runtime
+* Entry point
+* Environment settings
+
+---
+
+### Example of `app.yaml`
+
+```yaml
+runtime: python311
+
+entrypoint: gunicorn -b :$PORT main:app
+```
+
+---
+
+### What is YAML?
+
+YAML Ain’t Markup Language.
+
+Human-readable configuration format.
+
+---
+
+### What is indentation importance in YAML?
+
+YAML depends on spaces for structure.
+
+---
+
+### What happens if indentation wrong in YAML?
+
+Deployment error occurs.
+
+---
+
+# Python/Flask Questions
+
+### What is Flask?
+
+Lightweight Python web framework.
+
+---
+
+### Why Flask used in GAE?
+
+To create web applications easily.
+
+---
+
+### Install Flask command?
+
+```bash
+pip install flask
+```
+
+---
+
+### What is `requirements.txt`?
+
+Contains project dependencies.
+
+Example:
+
+```text
+Flask==2.3.2
+gunicorn==21.2.0
+```
+
+---
+
+### Purpose of `gunicorn`?
+
+Production WSGI server.
+
+---
+
+### What is WSGI?
+
+Web Server Gateway Interface.
+
+Connects Python web app with server.
+
+---
+
+### What is route in Flask?
+
+URL mapping.
+
+Example:
+
+```python
+@app.route('/')
+```
+
+---
+
+### What does `/` represent?
+
+Homepage route.
+
+---
+
+### What is decorator in Python?
+
+Function modifying another function behavior.
+
+Example:
+
+```python
+@app.route('/')
+```
+
+---
+
+### Purpose of `send_from_directory()`?
+
+Serves static files.
+
+---
+
+### Example:
+
+```python
+return send_from_directory('.', 'index.html')
+```
+
+Used to send HTML file.
+
+---
+
+# Code Related Questions
+
+## Explain this code:
+
+```python
+from flask import Flask
+```
+
+Imports Flask framework.
+
+---
+
+## Explain:
+
+```python
+app = Flask(__name__)
+```
+
+Creates Flask application object.
+
+---
+
+## Explain:
+
+```python
+@app.route('/')
+```
+
+Defines homepage URL.
+
+---
+
+## Explain:
+
+```python
+def home():
+```
+
+Function executed when homepage opens.
+
+---
+
+## Explain:
+
+```python
+app.run(debug=True)
+```
+
+Runs Flask server in debug mode.
+
+---
+
+### What is debug mode?
+
+Automatically reloads app and shows errors.
+
+---
+
+### Which port Flask usually runs on?
+
+```text
+5000
+```
+
+---
+
+### Which port GAE local server usually runs on?
+
+```text
+8080
+```
+
+---
+
+# Commands Viva
+
+### Create virtual environment:
+
+```bash
+python3 -m venv venv
+```
+
+---
+
+### Activate virtual environment:
+
+Mac/Linux:
+
+```bash
+source venv/bin/activate
+```
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+---
+
+### Install requirements:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### Run Flask app:
+
+```bash
+python3 main.py
+```
+
+---
+
+### Deploy application:
+
+```bash
+gcloud app deploy
+```
+
+---
+
+### Open deployed app:
+
+```bash
+gcloud app browse
+```
+
+---
+
+### Set project ID:
+
+```bash
+gcloud config set project PROJECT_ID
+```
+
+---
+
+# Practical Questions
+
+### Steps to deploy GAE app?
+
+1. Create project
+2. Write code
+3. Create `app.yaml`
+4. Install dependencies
+5. Login to gcloud
+6. Deploy using:
+
+```bash
+gcloud app deploy
+```
+
+---
+
+### Which file is compulsory in GAE?
+
+```text
+app.yaml
+```
+
+---
+
+### Which framework used in your project?
+
+```text
+Flask
+```
+
+---
+
+### Which language used?
+
+```text
+Python
+```
+
+---
+
+### What type of application you created?
+
+```text
+Web application
+```
+
+---
+
+# Error Related Questions
+
+### Common deployment errors?
+
+* Wrong YAML indentation
+* Missing dependencies
+* Wrong runtime
+* Flask not installed
+
+---
+
+### What happens if `requirements.txt` missing?
+
+Dependencies not installed.
+
+---
+
+### What happens if `app.yaml` missing?
+
+GAE cannot deploy application.
+
+---
+
+# Frontend Related Questions
+
+### What is HTML?
+
+Structure of webpage.
+
+---
+
+### What is CSS?
+
+Styling language.
+
+---
+
+### What is JavaScript?
+
+Programming language for webpage interaction.
+
+---
+
+### Difference between frontend and backend?
+
+| Frontend       | Backend          |
+| -------------- | ---------------- |
+| User interface | Server logic     |
+| HTML/CSS/JS    | Python/Java/Node |
+
+---
+
+# Static & Dynamic Questions
+
+### What is static webpage?
+
+Fixed content.
+
+---
+
+### What is dynamic webpage?
+
+Content changes dynamically.
+
+---
+
+### Is Flask app dynamic?
+
+Yes.
+
+---
+
+# Security Questions
+
+### Why cloud security important?
+
+Protects user data and applications.
+
+---
+
+### What is authentication?
+
+Verifying user identity.
+
+---
+
+# Networking Questions
+
+### What is localhost?
+
+Own machine acting as server.
+
+---
+
+### What is URL?
+
+Uniform Resource Locator.
+
+---
+
+### Example:
+
+```text
+http://localhost:5000
+```
+
+---
+
+### What is HTTP?
+
+Protocol for web communication.
+
+---
+
+### Difference between HTTP and HTTPS?
+
+| HTTP          | HTTPS     |
+| ------------- | --------- |
+| Not secure    | Secure    |
+| No encryption | Encrypted |
+
+---
+
+# Interview/Examiner Questions
+
+### Why did you choose GAE?
+
+Easy deployment and cloud learning.
+
+---
+
+### What did you learn from this practical?
+
+* Cloud deployment
+* Flask basics
+* YAML configuration
+* Web hosting
+
+---
+
+### Advantages of cloud deployment?
+
+* Accessible anywhere
+* Scalable
+* Reliable
+
+---
+
+### Challenges faced?
+
+* Deployment errors
+* YAML indentation
+* Package installation
+
+---
+
+# One-Line Rapid Fire Questions
+
+| Question                  | Answer            |
+| ------------------------- | ----------------- |
+| GAE full form             | Google App Engine |
+| Cloud model of GAE        | PaaS              |
+| Config file name          | app.yaml          |
+| Python framework used     | Flask             |
+| Dependency file           | requirements.txt  |
+| Deployment command        | gcloud app deploy |
+| Open deployed app command | gcloud app browse |
+| Language used             | Python            |
+| Web server used           | gunicorn          |
+| Frontend languages        | HTML, CSS, JS     |
+
+---
+
+# Advanced Questions
+
+### What is scalability?
+
+Ability to handle increasing load.
+
+---
+
+### What is serverless computing?
+
+Running applications without managing servers.
+
+---
+
+### Is GAE serverless?
+
+Yes, mostly managed/serverless platform.
+
+---
+
+### Difference between App Engine Standard and Flexible?
+
+| Standard        | Flexible           |
+| --------------- | ------------------ |
+| Faster startup  | Custom environment |
+| Limited control | More control       |
+
+---
+
+### What is API?
+
+Application Programming Interface.
+
+---
+
+### Can GAE host APIs?
+
+Yes.
+
+---
+
+### Can databases connect with GAE?
+
+Yes.
+
+Example:
+
+* Firestore
+* MySQL
+* MongoDB
+
+---
+
+# Final Most Asked Viva Question
+
+### Explain your project in 1 minute.
+
+Sample Answer:
+
+> I created a simple web application using HTML, CSS, and JavaScript and hosted it using Google App Engine. I used Flask as backend framework and configured deployment using `app.yaml`. The application was deployed using Google Cloud SDK commands. This practical helped me understand cloud deployment and web hosting concepts.
