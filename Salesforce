@@ -1,0 +1,551 @@
+# Salesforce Mini Project Viva Questions & Answers
+
+For your practical:
+
+> **Project:** Student Management System using Salesforce Cloud
+
+---
+
+# BASIC SALESFORCE QUESTIONS
+
+## 1. What is Salesforce?
+
+Salesforce is a cloud-based CRM platform used to build business applications.
+
+---
+
+## 2. What is CRM?
+
+CRM stands for Customer Relationship Management.
+
+It helps organizations manage:
+
+* Customers
+* Sales
+* Services
+* Business data
+
+---
+
+## 3. What is Cloud Computing?
+
+Providing services like storage, software, and servers over the internet.
+
+---
+
+## 4. Types of Cloud Computing?
+
+| Type | Meaning                     |
+| ---- | --------------------------- |
+| SaaS | Software as a Service       |
+| PaaS | Platform as a Service       |
+| IaaS | Infrastructure as a Service |
+
+---
+
+## 5. Salesforce belongs to which cloud model?
+
+Mainly:
+
+* SaaS
+* PaaS
+
+---
+
+## 6. What is Salesforce used for?
+
+Used for:
+
+* CRM
+* App development
+* Automation
+* Reports
+* Data management
+
+---
+
+# SALESFORCE ARCHITECTURE QUESTIONS
+
+## 7. What is Multi-Tenant Architecture?
+
+Many users share same resources securely.
+
+---
+
+## 8. What is Metadata?
+
+Data about data.
+
+Example:
+
+* Object structure
+* Fields
+* Layouts
+
+---
+
+## 9. What is API?
+
+API allows communication between applications.
+
+---
+
+# OBJECT QUESTIONS
+
+## 10. What is Object in Salesforce?
+
+Object is similar to a database table.
+
+---
+
+## 11. Types of Objects?
+
+| Type            | Meaning      |
+| --------------- | ------------ |
+| Standard Object | Predefined   |
+| Custom Object   | User created |
+
+---
+
+## 12. Examples of Standard Objects?
+
+* Account
+* Contact
+* Opportunity
+* Lead
+
+---
+
+## 13. What is Custom Object?
+
+Object created by user according to requirement.
+
+Example:
+
+* Student
+* Employee
+
+---
+
+## 14. What is Record?
+
+Single row of data in object.
+
+---
+
+## 15. What is Field?
+
+Field is column in object.
+
+---
+
+## 16. Types of Fields?
+
+| Field Type | Use        |
+| ---------- | ---------- |
+| Text       | Name       |
+| Number     | Age        |
+| Email      | Email      |
+| Date       | DOB        |
+| Picklist   | Dropdown   |
+| Checkbox   | True/False |
+
+---
+
+# APP QUESTIONS
+
+## 17. What is Lightning App?
+
+Custom application created in Salesforce.
+
+---
+
+## 18. What is App Launcher?
+
+Used to open apps.
+
+---
+
+## 19. What is Tab?
+
+Interface used to access object records.
+
+---
+
+## 20. Difference Between Object and Tab?
+
+| Object      | Tab             |
+| ----------- | --------------- |
+| Stores data | Displays object |
+
+---
+
+# SECURITY QUESTIONS
+
+## 21. What is Role?
+
+Controls record access hierarchy.
+
+---
+
+## 22. What is Profile?
+
+Controls permissions.
+
+---
+
+## 23. Difference Between Role and Profile?
+
+| Role        | Profile           |
+| ----------- | ----------------- |
+| Data access | Permission access |
+
+---
+
+## 24. What is Sharing Rule?
+
+Used to share records with users.
+
+---
+
+# DATABASE QUESTIONS
+
+## 25. Is Salesforce a Database?
+
+Yes, it stores data like a database.
+
+---
+
+## 26. What is SOQL?
+
+Salesforce Object Query Language.
+
+Used to fetch records.
+
+Example:
+
+```sql
+SELECT Name FROM Student__c
+```
+
+---
+
+## 27. Difference Between SQL and SOQL?
+
+| SQL             | SOQL             |
+| --------------- | ---------------- |
+| Works on tables | Works on objects |
+| Supports joins  | Limited joins    |
+
+---
+
+# AUTOMATION QUESTIONS
+
+## 28. What is Workflow?
+
+Automation tool in Salesforce.
+
+---
+
+## 29. What is Process Builder?
+
+Advanced automation tool.
+
+---
+
+## 30. What is Flow?
+
+Modern automation tool in Salesforce.
+
+---
+
+# REPORT QUESTIONS
+
+## 31. What is Report?
+
+Displays data in tabular format.
+
+---
+
+## 32. What is Dashboard?
+
+Graphical representation of reports.
+
+---
+
+## 33. Difference Between Report and Dashboard?
+
+| Report       | Dashboard      |
+| ------------ | -------------- |
+| Tabular data | Graphical data |
+
+---
+
+# PROJECT QUESTIONS
+
+## 34. Explain Your Project.
+
+> I developed a Student Management System using Salesforce Cloud.
+> I created a custom object called Student, added fields like Roll Number, Email, Course, and created reports and dashboards.
+
+---
+
+## 35. Which Object Did You Create?
+
+Student Object.
+
+---
+
+## 36. Which Fields Did You Create?
+
+* Student Name
+* Roll Number
+* Email
+* Phone
+* Course
+* Admission Date
+
+---
+
+## 37. Why Did You Use Picklist?
+
+To provide predefined values.
+
+---
+
+## 38. What Reports Did You Create?
+
+Student report showing:
+
+* Student Name
+* Course
+* Email
+
+---
+
+## 39. What Dashboard Did You Create?
+
+Dashboard showing:
+
+* Students by Course
+* Total Students
+
+---
+
+## 40. Advantages of Salesforce?
+
+* Cloud based
+* Secure
+* Scalable
+* Easy automation
+* No hardware needed
+
+---
+
+# LIGHTNING QUESTIONS
+
+## 41. What is Lightning Experience?
+
+Modern UI of Salesforce.
+
+---
+
+## 42. Difference Between Classic and Lightning?
+
+| Classic       | Lightning     |
+| ------------- | ------------- |
+| Old UI        | Modern UI     |
+| Less features | More features |
+
+---
+
+# ADMIN QUESTIONS
+
+## 43. What is Sandbox?
+
+Testing environment.
+
+---
+
+## 44. What is Deployment?
+
+Moving project from testing to production.
+
+---
+
+## 45. What is Validation Rule?
+
+Used to validate data before saving.
+
+---
+
+## 46. What is Page Layout?
+
+Controls field arrangement on page.
+
+---
+
+## 47. What is Schema Builder?
+
+Visual tool to manage objects and relationships.
+
+---
+
+# RELATIONSHIP QUESTIONS
+
+## 48. Types of Relationships?
+
+| Relationship  | Meaning           |
+| ------------- | ----------------- |
+| Lookup        | Loose connection  |
+| Master-Detail | Strong connection |
+
+---
+
+## 49. Difference Between Lookup and Master-Detail?
+
+| Lookup      | Master-Detail |
+| ----------- | ------------- |
+| Independent | Parent-child  |
+| Optional    | Mandatory     |
+
+---
+
+# CODING QUESTIONS
+
+## 50. What is Apex?
+
+Programming language of Salesforce.
+
+---
+
+## 51. What is Visualforce?
+
+UI framework in Salesforce.
+
+---
+
+## 52. What is Trigger?
+
+Code executed automatically on database events.
+
+---
+
+# HOSTING QUESTIONS
+
+## 53. Is Salesforce installed locally?
+
+No, it is cloud based.
+
+---
+
+## 54. Which language is used in Salesforce backend?
+
+Apex.
+
+---
+
+# PRACTICAL QUESTIONS
+
+## 55. How did you create custom object?
+
+Using Object Manager → Custom Object.
+
+---
+
+## 56. How did you add fields?
+
+Fields & Relationships → New.
+
+---
+
+## 57. How did you create app?
+
+Using App Manager.
+
+---
+
+## 58. How did you test application?
+
+By creating student records.
+
+---
+
+# FREQUENT EXTERNAL EXAMINER QUESTIONS
+
+## 59. Why did you choose Salesforce?
+
+Easy cloud application development.
+
+---
+
+## 60. Why cloud instead of desktop application?
+
+Accessible from anywhere.
+
+---
+
+## 61. Real-world applications of Salesforce?
+
+* Banking
+* Healthcare
+* Education
+* Sales
+
+---
+
+# VERY IMPORTANT ONE-LINE ANSWERS
+
+| Question  | Answer                           |
+| --------- | -------------------------------- |
+| CRM       | Customer Relationship Management |
+| SaaS      | Software as a Service            |
+| PaaS      | Platform as a Service            |
+| Object    | Table                            |
+| Field     | Column                           |
+| Record    | Row                              |
+| Report    | Data analysis                    |
+| Dashboard | Visual report                    |
+| Apex      | Salesforce language              |
+| SOQL      | Query language                   |
+
+---
+
+# Common Practical Demonstration Questions
+
+## “Show how to add record”
+
+* Open App
+* Open Student Tab
+* Click New
+* Enter data
+* Save
+
+---
+
+## “Show report”
+
+* Open Reports
+* Open Student Report
+
+---
+
+## “Show custom object”
+
+* Setup → Object Manager → Student
+
+---
+
+# Important Salesforce Terms
+
+![Image](https://images.openai.com/static-rsc-4/ey9EwX7nUUSw5CmnwU1AIjgxUb9ImIhL1k_5MC7aUkNSZtYsAUesSV34b3j7ImArLpMdXrpFzsC1s9DaTsgfUeDDjSv_IY_yJiHnbNuzLi_Qd74QOVaya8o_iTxQa8wAPPPiQsa8KXxzeDa7BWO-JC7OFdmN8m79O8G-rcGIR3s37mnt6joYzIz-Qc7R4zyh?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/9AfETt_r5vO0AntasXXZbI-_-SecmPn0Ad1i-oAhBUBsAOSBjUyXNgfvn8VAbBczffU9r8Csbk1mvhs6D0p93x5Xj7XdFPJbrnbLg4KfzdJayVh5lRYhLHfGvYsAamil8oH6lv0waYYOZKxRWfvwn2gkrg3hVrA1_V3Bipw7rCPaGxnXKNQixE28MAl3aEf5?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/srIgkMlRb0qRCCOJ_ocHaPhWVb19CiOuTTuXHpAzWkPhDRDGd32q8Y6dOQL-grt1cgo329gg2AdAh7ME_XKly9RJWdvR3Hdp0HYvwB8Av1MyDKZeBLDeQ5waduy1-0MPL3t5YQk8V7TOrpf0PhFKJc8BX1vdKLiRxC6aQ-mCEEOP4yl5RqH9NiD-OsPqGBP3?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/2NtR2Fmc7u9m0PFxGfUHwuNXWHYz88YkZYEaEUc3ZN54TFzfEPZPmt9D1KbRqWK6EM1cnm8FF3-EClBHJGbUeiSLjHAVQ1PCq0pl1FIGKyLfAo2KnqoWfrm9p_GuiyQ3yLeAZlOzx-QM6UgJDRfigAdPDKa6BLqMlX04osGvDYXcdSYH07vaN04q_rqLR77m?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/89I0_itRNkmxOtvnUAhZAymrZSVdSmQeZclH878TgWqWtra9wCvqk-oUPmUV113pcom_3gv5kyTmVZOF_OfmIDhj87IcqxaWQKzTOZ-1Hd-mKAQ9nRakdZqed3iyKRDC7AocoqZxuLag_cgl3Ro5svOE2JFXYAqT3tL3vazmOiSgL1Q7an9UrrXDGtm_zBaw?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/MojAU5qSYeyT-16dC15kWWagbpf7LePHgqvAd83ucKjNVse9uqSHxrH2HL26Cu_4opDi3BcCoGYWfV5rfrIZ5kxMiopemKbUlCQQ23eJQSb_fmb6Tna5FWJEsj3gAutTZ2hEaI-TF5HE6IvlK1VZFgGS9WKkITcT7zGb6LggnOP4GpBpmEfIqmN5DS02mNgM?purpose=fullsize)
