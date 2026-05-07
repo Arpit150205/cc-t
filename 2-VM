@@ -1,0 +1,491 @@
+# Viva Questions — File Transfer Between One VM to Another VM
+
+## BASIC QUESTIONS
+
+### 1. What is a Virtual Machine?
+
+A Virtual Machine (VM) is a software-based computer system that runs an operating system inside another operating system.
+
+---
+
+### 2. What is virtualization?
+
+Virtualization is the technology used to create virtual versions of computers, servers, storage, or networks.
+
+---
+
+### 3. Name virtualization software.
+
+* [VMware Workstation](https://www.vmware.com/products/workstation-pro.html?utm_source=chatgpt.com)
+* [Oracle VM VirtualBox](https://www.virtualbox.org/?utm_source=chatgpt.com)
+* Hyper-V
+
+---
+
+### 4. Why are virtual machines used?
+
+* Testing
+* Running multiple OS
+* Security
+* Isolation
+* Cloud computing
+* Networking practice
+
+---
+
+### 5. Difference between Host OS and Guest OS?
+
+| Host OS               | Guest OS       |
+| --------------------- | -------------- |
+| Main operating system | OS inside VM   |
+| Controls hardware     | Runs virtually |
+
+---
+
+# NETWORKING QUESTIONS
+
+## 6. What is an IP address?
+
+An IP address uniquely identifies a device on a network.
+
+Example:
+
+```text id="a9xv6n"
+192.168.64.5
+```
+
+---
+
+## 7. Command to find IP address?
+
+```bash id="c51c4d"
+hostname -I
+```
+
+OR
+
+```bash id="23rujlwm"
+ip a
+```
+
+---
+
+## 8. What is ping?
+
+Ping checks connectivity between two systems.
+
+---
+
+## 9. Syntax of ping command?
+
+```bash id="9w2lpo"
+ping IP_ADDRESS
+```
+
+Example:
+
+```bash id="vnx2zc"
+ping 192.168.64.6
+```
+
+---
+
+## 10. Why is ping used before file transfer?
+
+To verify network connection between VMs.
+
+---
+
+## 11. What is localhost?
+
+Localhost refers to the same computer.
+
+IP:
+
+```text id="axq6r0"
+127.0.0.1
+```
+
+---
+
+## 12. What is NAT mode?
+
+NAT allows VM to access internet through host machine.
+
+---
+
+## 13. What is Bridged networking?
+
+VM behaves like separate computer in same network.
+
+---
+
+## 14. Difference between NAT and Bridged?
+
+| NAT            | Bridged               |
+| -------------- | --------------------- |
+| Shares host IP | Separate IP           |
+| Safer          | Direct network access |
+
+---
+
+# SCP QUESTIONS
+
+## 15. What is SCP?
+
+SCP stands for Secure Copy Protocol.
+
+Used for secure file transfer between systems.
+
+---
+
+## 16. Which protocol does SCP use?
+
+SSH protocol.
+
+---
+
+## 17. Default port number of SSH?
+
+```text id="c55z9t"
+22
+```
+
+---
+
+## 18. Syntax of SCP?
+
+```bash id="8a2lmg"
+scp source destination
+```
+
+Example:
+
+```bash id="jlwm6g"
+scp demo.txt ubuntu@192.168.64.6:/home/ubuntu/
+```
+
+---
+
+## 19. Meaning of this command?
+
+```bash id="n9q13q"
+scp demo.txt ubuntu@192.168.64.6:/home/ubuntu/
+```
+
+Copies `demo.txt` from current VM to another VM.
+
+---
+
+## 20. What does ubuntu@192.168.64.6 mean?
+
+* `ubuntu` → username
+* `192.168.64.6` → destination VM IP
+
+---
+
+## 21. Why is SCP secure?
+
+Because data is encrypted using SSH.
+
+---
+
+## 22. Difference between SCP and FTP?
+
+| SCP       | FTP               |
+| --------- | ----------------- |
+| Secure    | Less secure       |
+| Encrypted | Unencrypted       |
+| Uses SSH  | Uses FTP protocol |
+
+---
+
+## 23. Command to transfer directory?
+
+```bash id="ag35jp"
+scp -r folder ubuntu@192.168.64.6:/home/ubuntu/
+```
+
+---
+
+## 24. Meaning of -r in SCP?
+
+Recursive copy for folders/directories.
+
+---
+
+## 25. How to copy file from remote VM to local VM?
+
+```bash id="b0kq2u"
+scp ubuntu@192.168.64.6:/home/ubuntu/demo.txt .
+```
+
+---
+
+# SSH QUESTIONS
+
+## 26. What is SSH?
+
+SSH stands for Secure Shell.
+
+Used for secure remote login and communication.
+
+---
+
+## 27. Command to connect remote VM using SSH?
+
+```bash id="8f4i6n"
+ssh ubuntu@192.168.64.6
+```
+
+---
+
+## 28. Why is SSH important?
+
+Provides secure encrypted communication.
+
+---
+
+## 29. How to start SSH service?
+
+```bash id="0kksf5"
+sudo service ssh start
+```
+
+OR
+
+```bash id="up9h0y"
+sudo systemctl start ssh
+```
+
+---
+
+# LINUX COMMAND QUESTIONS
+
+## 30. Command to list files?
+
+```bash id="0y8n1m"
+ls
+```
+
+---
+
+## 31. Command to create file?
+
+```bash id="b86u5q"
+touch demo.txt
+```
+
+OR
+
+```bash id="jlwmcj"
+echo "Hello" > demo.txt
+```
+
+---
+
+## 32. Command to display file content?
+
+```bash id="kw45x4"
+cat demo.txt
+```
+
+---
+
+## 33. Command to change directory?
+
+```bash id="a0x5gx"
+cd foldername
+```
+
+---
+
+## 34. Command to check current directory?
+
+```bash id="vfzb9p"
+pwd
+```
+
+---
+
+## 35. Command to remove file?
+
+```bash id="tjl0u7"
+rm filename
+```
+
+---
+
+## 36. Command to create folder?
+
+```bash id="sjjlwm"
+mkdir foldername
+```
+
+---
+
+## 37. What is chmod?
+
+Used to change file permissions.
+
+---
+
+## 38. Example of chmod?
+
+```bash id="efgjeg"
+chmod 777 demo.txt
+```
+
+---
+
+## 39. Meaning of 777 permission?
+
+* Read
+* Write
+* Execute for everyone
+
+---
+
+# ERROR QUESTIONS
+
+## 40. What causes “Permission Denied”?
+
+* Wrong password
+* No permission
+* SSH issue
+
+---
+
+## 41. What causes “Connection Refused”?
+
+SSH service not running.
+
+---
+
+## 42. Solution for connection refused?
+
+Start SSH service.
+
+```bash id="1lrq5c"
+sudo service ssh start
+```
+
+---
+
+## 43. Why file transfer may fail?
+
+* Network issue
+* Wrong IP
+* SSH not running
+* Wrong path
+* Wrong credentials
+
+---
+
+# PRACTICAL QUESTIONS
+
+## 44. Steps of experiment?
+
+1. Start two VMs
+2. Check IP addresses
+3. Test ping
+4. Create file
+5. Use SCP command
+6. Verify transferred file
+
+---
+
+## 45. Aim of experiment?
+
+To transfer files from one virtual machine to another using SCP protocol.
+
+---
+
+## 46. Result of experiment?
+
+File transferred successfully between virtual machines.
+
+---
+
+# ADVANCED THEORY QUESTIONS
+
+## 47. Difference between SCP and SFTP?
+
+| SCP         | SFTP            |
+| ----------- | --------------- |
+| Faster      | Interactive     |
+| Simple copy | File management |
+
+---
+
+## 48. What is encryption?
+
+Converting data into secure unreadable form.
+
+---
+
+## 49. What is network protocol?
+
+Set of rules for communication between devices.
+
+---
+
+## 50. What is secure communication?
+
+Communication protected from unauthorized access.
+
+---
+
+# IMPORTANT COMMANDS FOR VIVA
+
+```bash id="d0kjlwm"
+hostname -I
+```
+
+```bash id="4yqz7m"
+ping IP
+```
+
+```bash id="2rmtx8"
+scp file username@IP:/path
+```
+
+```bash id="fjlwmc"
+ssh username@IP
+```
+
+```bash id="2z5f0l"
+ls
+```
+
+```bash id="jlwmry"
+cat filename
+```
+
+```bash id="cjlwm7"
+pwd
+```
+
+```bash id="pj1wjlwm"
+mkdir folder
+```
+
+---
+
+# MOST IMPORTANT QUESTIONS EXAMINER MAY ASK
+
+1. What is virtualization?
+2. What is VM?
+3. What is SCP?
+4. Why SCP is secure?
+5. Difference between SCP and FTP?
+6. What is SSH?
+7. Default SSH port?
+8. What is ping?
+9. What is IP address?
+10. Difference between NAT and Bridged mode?
+11. Meaning of recursive copy?
+12. Why use Linux in virtualization?
+13. What happens if SSH service stops?
+14. Explain SCP command used by you.
+15. How did you verify file transfer?
