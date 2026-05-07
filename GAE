@@ -1,0 +1,602 @@
+# Google App Engine Viva Questions + Theory + Lab Answers (Python)
+
+# 1. What is Google App Engine?
+
+Google App Engine is a **Platform as a Service (PaaS)** provided by [Google Cloud Platform](https://cloud.google.com?utm_source=chatgpt.com) to build, deploy, and host web applications without managing servers.
+
+---
+
+# 2. What is PaaS?
+
+PaaS (Platform as a Service) provides:
+
+* Runtime environment
+* Server management
+* Deployment tools
+* Scalability
+
+Developer only writes code.
+
+---
+
+# 3. Difference Between IaaS, PaaS, SaaS
+
+| Type | Meaning                     | Example           |
+| ---- | --------------------------- | ----------------- |
+| IaaS | Infrastructure as a Service | AWS EC2           |
+| PaaS | Platform as a Service       | Google App Engine |
+| SaaS | Software as a Service       | Gmail             |
+
+---
+
+# 4. What is Google Cloud?
+
+Google Cloud is a cloud computing platform offering:
+
+* Storage
+* Databases
+* Virtual machines
+* AI services
+* Web hosting
+
+---
+
+# 5. What is App Engine used for?
+
+Used for:
+
+* Web applications
+* APIs
+* Backend services
+* Scalable cloud apps
+
+---
+
+# 6. Advantages of Google App Engine
+
+* Automatic scaling
+* No server management
+* Fast deployment
+* Secure
+* Supports Python, Java, Node.js, Go
+
+---
+
+# 7. What is Flask?
+
+Flask is a lightweight Python web framework used for web applications.
+
+---
+
+# 8. Why Flask is used?
+
+* Simple
+* Lightweight
+* Easy routing
+* Good for beginners
+
+---
+
+# 9. What is a Web Framework?
+
+A framework used to develop web applications.
+
+Examples:
+
+* Flask
+* Django
+* Spring Boot
+
+---
+
+# 10. What is Routing?
+
+Routing maps URL paths to functions.
+
+Example:
+
+```python
+@app.route('/')
+def home():
+    return "Hello"
+```
+
+---
+
+# 11. What is `app.route()`?
+
+Decorator used to define URL endpoints.
+
+---
+
+# 12. What is `app.yaml`?
+
+Configuration file for App Engine.
+
+Example:
+
+```yaml
+runtime: python311
+```
+
+---
+
+# 13. Purpose of `main.py`
+
+Contains application logic and routes.
+
+---
+
+# 14. What does this code do?
+
+```python
+from flask import Flask
+```
+
+Imports Flask module.
+
+---
+
+# 15. What does this line mean?
+
+```python
+app = Flask(__name__)
+```
+
+Creates Flask application object.
+
+---
+
+# 16. What is `__name__`?
+
+Special Python variable representing current module name.
+
+---
+
+# 17. Explain Hello World Program
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return "Hello World"
+
+if __name__ == '__main__':
+    app.run()
+```
+
+Explanation:
+
+* Import Flask
+* Create app object
+* Define route
+* Return response
+* Run server
+
+---
+
+# 18. What is localhost?
+
+Local machine/server.
+
+Example:
+
+```text
+http://127.0.0.1:8080
+```
+
+---
+
+# 19. Difference Between localhost and Internet Server
+
+| localhost    | Internet server |
+| ------------ | --------------- |
+| Runs locally | Runs online     |
+| Testing      | Production      |
+
+---
+
+# 20. What is Deployment?
+
+Uploading application to cloud server.
+
+---
+
+# 21. Command to Deploy App
+
+```bash
+gcloud app deploy
+```
+
+---
+
+# 22. Command to Open Deployed App
+
+```bash
+gcloud app browse
+```
+
+---
+
+# 23. Command to Login Google Cloud
+
+```bash
+gcloud auth login
+```
+
+---
+
+# 24. Command to Create Project
+
+```bash
+gcloud projects create PROJECT_ID
+```
+
+---
+
+# 25. What is Google Cloud SDK?
+
+Tool used to manage Google Cloud services using command line.
+
+---
+
+# 26. What is `gcloud`?
+
+Command line interface for Google Cloud.
+
+---
+
+# 27. What is Scaling?
+
+Automatically increasing resources when traffic increases.
+
+---
+
+# 28. Types of Scaling in App Engine
+
+* Automatic scaling
+* Basic scaling
+* Manual scaling
+
+---
+
+# 29. What is Automatic Scaling?
+
+App Engine automatically creates instances based on traffic.
+
+---
+
+# 30. What is Cloud Computing?
+
+Using internet-based computing resources instead of local machines.
+
+---
+
+# 31. Types of Cloud
+
+| Type          | Meaning           |
+| ------------- | ----------------- |
+| Public Cloud  | Shared services   |
+| Private Cloud | Organization-only |
+| Hybrid Cloud  | Combination       |
+
+---
+
+# 32. What is Instance?
+
+Running copy of application.
+
+---
+
+# 33. What is Runtime?
+
+Environment where application runs.
+
+Example:
+
+* Python runtime
+* Java runtime
+
+---
+
+# 34. Runtime Used in Practical
+
+```yaml
+runtime: python311
+```
+
+---
+
+# 35. What is HTTP?
+
+HyperText Transfer Protocol used for communication between browser and server.
+
+---
+
+# 36. Difference Between GET and POST
+
+| GET            | POST      |
+| -------------- | --------- |
+| Fetch data     | Send data |
+| Visible in URL | Hidden    |
+
+---
+
+# 37. What is URL?
+
+Web address of resource.
+
+---
+
+# 38. What is API?
+
+Application Programming Interface.
+
+Allows communication between applications.
+
+---
+
+# 39. What is Cloud Deployment?
+
+Hosting application on cloud platform.
+
+---
+
+# 40. Explain Steps of Practical
+
+1. Install Google Cloud SDK
+2. Install Python & Flask
+3. Create `main.py`
+4. Create `app.yaml`
+5. Run locally
+6. Login using `gcloud auth login`
+7. Create project
+8. Deploy using `gcloud app deploy`
+
+---
+
+# 41. Folder Structure
+
+```text
+project/
+│
+├── main.py
+└── app.yaml
+```
+
+---
+
+# 42. What happens after deployment?
+
+Google hosts app online and provides URL.
+
+---
+
+# 43. What is Port 8080?
+
+Communication endpoint for local web server.
+
+---
+
+# 44. Difference Between Flask and Django
+
+| Flask       | Django          |
+| ----------- | --------------- |
+| Lightweight | Heavy framework |
+| Simple      | Full featured   |
+
+---
+
+# 45. What is a Server?
+
+Computer/system serving requests.
+
+---
+
+# 46. Why Cloud is Better?
+
+* Scalable
+* Reliable
+* Cost effective
+* Accessible anywhere
+
+---
+
+# 47. What is Static Web App?
+
+Website with fixed content.
+
+---
+
+# 48. What is Dynamic Web App?
+
+Website generating content dynamically.
+
+---
+
+# 49. Is Flask frontend or backend?
+
+Backend framework.
+
+---
+
+# 50. What languages App Engine supports?
+
+* Python
+* Java
+* Go
+* PHP
+* Node.js
+
+---
+
+# 51. What is Environment Variable?
+
+Variable storing system configuration values.
+
+---
+
+# 52. What is CLI?
+
+Command Line Interface.
+
+---
+
+# 53. What is SDK?
+
+Software Development Kit.
+
+---
+
+# 54. What is Cloud Hosting?
+
+Hosting application on cloud servers.
+
+---
+
+# 55. What is Web Application?
+
+Software accessed through browser.
+
+---
+
+# 56. Explain this code
+
+```python
+if __name__ == '__main__':
+```
+
+Runs app only when file executed directly.
+
+---
+
+# 57. What is Debug Mode?
+
+Shows errors during development.
+
+---
+
+# 58. Command to Install Flask
+
+```bash
+pip3 install flask
+```
+
+---
+
+# 59. Command to Run App
+
+```bash
+python3 main.py
+```
+
+---
+
+# 60. What is Virtual Machine?
+
+Software-based computer system.
+
+---
+
+# MOST IMPORTANT LAB PROGRAM
+
+## Hello World App
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return "Hello World from Google App Engine"
+
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=8080, debug=True)
+```
+
+---
+
+# `app.yaml`
+
+```yaml
+runtime: python311
+```
+
+---
+
+# Multi Page App
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "<h1>Home Page</h1>"
+
+@app.route('/about')
+def about():
+    return "<h1>About Page</h1>"
+
+@app.route('/contact')
+def contact():
+    return "<h1>Contact Page</h1>"
+
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=8080, debug=True)
+```
+
+---
+
+# One-Line Viva Answers
+
+## What is Flask?
+
+Lightweight Python web framework.
+
+## What is App Engine?
+
+Google cloud platform for hosting apps.
+
+## What is `app.yaml`?
+
+Configuration file.
+
+## What is deployment?
+
+Uploading app to cloud.
+
+## Command to deploy?
+
+```bash
+gcloud app deploy
+```
+
+## Command to run locally?
+
+```bash
+python3 main.py
+```
+
+## Port used?
+
+```text
+8080
+```
+
+## Framework used?
+
+```text
+Flask
+```
+
+## Cloud provider?
+
+```text
+Google Cloud
+```
